@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-04T01:14:47.264Z",
+  "unusedCount": 2,
+  "unusedImages": [
+    {
+      "path": "src\\assets\\test5.jpg",
+      "size": "12 KB",
+      "lastModified": "2025-09-04"
+    },
+    {
+      "path": "public\\test4.jpg",
+      "size": "13 KB",
+      "lastModified": "2025-09-04"
+    }
+  ]
+}

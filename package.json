@@ -1,8 +1,19 @@
 {
   "name": "vite-plugin-unused-images",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "A Vite plugin to detect and report unused image assets in your project",
+  "version": "0.0.3",
+  "author": "sunrise",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsup src/index.ts --dts --format cjs,esm",
@@ -18,12 +29,38 @@
     "prettier": "^3.0.1",
     "tsup": "^8.5.0",
     "typescript": "~5.8.3",
-    "vite": "^7.1.2"
+    "vite": "^4.3.3"
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.3",
+    "chalk": "^5.6.0",
     "glob": "^11.0.3",
     "lightningcss": "^1.30.1",
     "rollup": "^4.40.0"
-  }
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "image",
+    "unused",
+    "assets",
+    "clean",
+    "frontend",
+    "optimization",
+    "webpack-alternative"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunrisies/vite-plugin-unused-images.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sunrisies/vite-plugin-unused-images/issues"
+  },
+  "homepage": "https://github.com/Sunrisies/vite-plugin-unused-images#readme"
 }
