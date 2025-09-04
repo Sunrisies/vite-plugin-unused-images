@@ -1,6 +1,4 @@
-// src/core/utils.ts
 import fs from 'node:fs';
-import path from 'node:path';
 
 export function getFileSize(filePath: string): string {
     try {

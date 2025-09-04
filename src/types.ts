@@ -15,6 +15,8 @@ export interface UnusedImagesPluginOptions {
     outputFile?: string;       // 输出结果的文件名
     /** 是否输出到控制台，默认为 false */
     failOnUnused?: boolean;    // 发现未使用图片时是否使构建失败
+    /** 是否删除未使用图片，默认为 false */
+    deleteUnused?: boolean;   // 是否删除未使用图片
 }
 
 export type Convert =

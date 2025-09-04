@@ -19,11 +19,7 @@
 ## 📦 安装
 
 ```bash
-npm i -D vite-plugin-unused-images
-# or
-yarn add -D vite-plugin-unused-images
-# or
-pnpm add -D vite-plugin-unused-images
+bun install -D vite-plugin-unused-images
 ```
 
 ---
@@ -49,7 +45,7 @@ export default defineConfig({
 ### 2. 运行构建
 
 ```bash
-npm run build
+bun run build
 ```
 
 终端示例输出：
@@ -77,6 +73,7 @@ npm run build
 | `exclude`      | `string[]` | `[]`                                      | glob 忽略规则                  |
 | `outputFile`   | `string`   | `'unused-images.json'`                    | 报告输出路径                   |
 | `failOnUnused` | `boolean`  | `false`                                   | 发现未使用图片时是否让构建失败 |
+| `deleteUnused` | `boolean`  | `false`                                   | 是否删除未使用图片             |
 
 ### 示例：自定义配置
 
@@ -87,7 +84,8 @@ unusedImages({
 	extensions: ['png', 'svg'],
 	exclude: ['**/node_modules/**', '**/*.d.ts'],
 	outputFile: 'reports/unused-images.json',
-	failOnUnused: true
+	failOnUnused: true,
+	deleteUnused: false
 })
 ```
 
@@ -137,9 +135,7 @@ MIT © 2024-present
 开发调试：
 
 ```bash
-git clone https://github.com/your-org/vite-plugin-unused-images.git
+git clone https://github.com/Sunrisies/vite-plugin-unused-images.git
 cd vite-plugin-unused-images
-pnpm i
-pnpm dev            # 监听构建
-pnpm test           # 单测
+bun i
 ```

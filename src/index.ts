@@ -3,7 +3,7 @@ import { UnusedImagesPluginOptions } from './types';
 import { collectImageFiles, collectSourceFiles } from './core/collect';
 import { analyzeImageReferences } from './core/analyze';
 import { outputResults } from './core/reporter';
-
+import { deleteFiles } from './core/delete';
 export default function unusedImagesPlugin(
     options: UnusedImagesPluginOptions = {}
 ) {
@@ -14,6 +14,7 @@ export default function unusedImagesPlugin(
         exclude = [],
         outputFile = 'unused-images.json',
         failOnUnused = false,
+        deleteUnused = false
     } = options;
 
     return {
@@ -32,6 +33,9 @@ export default function unusedImagesPlugin(
 
             if (unusedImages.length && failOnUnused) {
                 throw new Error(`❌ 发现 ${unusedImages.length} 个未使用的图片资源`);
+            }
+            if (deleteUnused && unusedImages.length > 0) {
+                await deleteFiles(unusedImages);
             }
         },
     };

@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-unused-images",
   "description": "A Vite plugin to detect and report unused image assets in your project",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "sunrise",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

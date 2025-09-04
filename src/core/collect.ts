@@ -1,4 +1,3 @@
-// src/core/collect.ts
 import fs from 'node:fs';
 import { glob } from 'glob';
 

@@ -19,11 +19,7 @@
 ## 📦 Installation
 
 ```bash
-npm i -D vite-plugin-unused-images
-# or
-yarn add -D vite-plugin-unused-images
-# or
-pnpm add -D vite-plugin-unused-images
+bun i -D vite-plugin-unused-images
 ```
 
 ---
@@ -49,7 +45,7 @@ export default defineConfig({
 ### 2. Run build
 
 ```bash
-npm run build
+bun run build
 ```
 
 Example terminal output:
@@ -77,6 +73,7 @@ Unused images:
 | `exclude`      | `string[]` | `[]`                                      | Glob patterns to ignore                    |
 | `outputFile`   | `string`   | `'unused-images.json'`                    | Path to save the JSON report               |
 | `failOnUnused` | `boolean`  | `false`                                   | Throw error if any unused images are found |
+| `deleteUnused` | `boolean`  | `false`                                   | Delete unused images from output directory |
 
 ### Custom example
 
@@ -87,7 +84,8 @@ unusedImages({
 	extensions: ['png', 'svg'],
 	exclude: ['**/node_modules/**', '**/*.d.ts'],
 	outputFile: 'reports/unused-images.json',
-	failOnUnused: true
+	failOnUnused: true,
+	deleteUnused: false
 })
 ```
 
@@ -137,9 +135,7 @@ Issues and PRs are welcome!
 To develop locally:
 
 ```bash
-git clone https://github.com/your-org/vite-plugin-unused-images.git
+git clone https://github.com/Sunrisies/vite-plugin-unused-images.git
 cd vite-plugin-unused-images
-pnpm i
-pnpm dev          # watch build
-pnpm test         # unit tests
+bun install
 ```

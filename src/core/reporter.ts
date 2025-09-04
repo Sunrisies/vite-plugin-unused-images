@@ -1,7 +1,5 @@
-// src/core/reporter.ts
 import fs from 'node:fs/promises';
 import chalk from 'chalk';          // 终端彩色输出
-import { UnusedImageInfo } from '../types';
 import { getFileSize, getLastModified } from './utils';
 
 export async function outputResults(
