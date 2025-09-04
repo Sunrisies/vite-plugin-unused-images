@@ -1,0 +1,29 @@
+{
+  "name": "vite-plugin-unused-images",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.1",
+    "tsup": "^8.5.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.0.3",
+    "glob": "^11.0.3",
+    "lightningcss": "^1.30.1",
+    "rollup": "^4.40.0"
+  }
+}
